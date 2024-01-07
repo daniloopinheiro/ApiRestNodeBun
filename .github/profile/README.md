@@ -3,15 +3,15 @@
 ## Etapas Do Projeto
 
 - Configuração da aplicação
-- Criação de um diretorio
+- Criação de diretorios
   - mkdir api-rest-node-bun && cd api-rest-node-bun
 - Inicialização do aplicativo
   - bun init
-- Escolhe padrão para inicialização do aplicativo.
+- Escolha padrão para inicialização do aplicativo.
 - Instalação de dependências
   - bun add elysia @elysiajs/cookie prisma @prisma/client dotenv pg jsonwebtoken@8.5.1
-- Instação correspondentes
-  -   bun add -d @types/jsonwebtoken
+- Instalação correspondentes
+  - bun add -d @types/jsonwebtoken
 - As dependências que foram instaladas:
   - Elysia: Elysia é uma estrutura web para Bun que simplifica o trabalho com Bun, semelhante ao que Express faz para Node.js.
   - Prisma: Prisma é um mapeador objeto-relacional (ORM) para JavaScript e TypeScript.

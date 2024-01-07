@@ -30,3 +30,5 @@
 - Configurando seu servidor Bun-Elysia
 - comando para iniciar app.
   - bun --watch index.ts
+  
+[Fonte Seguido](https://blog.openreplay.com/api-creation-with-bun/?ref=dailydev)

@@ -2,11 +2,63 @@
 
 ## Etapas Do Projeto
 
-- Configuração da aplicação
-- Criação de diretorios
-  - mkdir api-rest-node-bun && cd api-rest-node-bun
-- Inicialização do aplicativo
-  - bun init
+- Configuração geral
+> Sistema operacional
+```bash
+codespace@codespaces-04d171 
+--------------------------- 
+OS: Ubuntu 20.04.6 LTS x86_64 
+Host: Virtual Machine 7.0 
+Kernel: 6.2.0-1018-azure 
+Uptime: 39 mins 
+Packages: 650 (dpkg) 
+Shell: bash 5.0.17 
+Terminal: vscode 
+CPU: AMD EPYC 7763 (2) @ 3.242GHz
+Memory: 2050MiB / 7929MiB 
+```
+
+> Instalando o sistema Bun
+
+```bash
+$ curl -fsSL https://bun.sh/install | bash
+######################################################################## 100.0%
+bun was installed successfully to ~/.bun/bin/bun 
+
+Added "~/.bun/bin" to $PATH in "~/.bashrc" 
+
+To get started, run: 
+
+  source /home/codespace/.bashrc 
+  bun --help 
+``` 
+
+> Criação de diretorios
+
+```bash
+$ mkdir api-rest-node-bun && cd api-rest-node-bun
+```
+
+> Inicialização do aplicativo
+
+```bash
+$ bun init
+```
+>> Possivel ocorrido.
+
+```bash
+$ bash: bun: command not found
+```
+
+>> Solução
+
+```bash
+$ vi ~/.bashrc
+
+export BUN_INSTALL="$USER/.bun" 
+export PATH="$BUN_INSTALL/bin:$PATH"
+```
+
 - Escolha padrão para inicialização do aplicativo.
 - Instalação de dependências
   - bun add elysia @elysiajs/cookie prisma @prisma/client dotenv pg jsonwebtoken@8.5.1
@@ -30,5 +82,3 @@
 - Configurando seu servidor Bun-Elysia
 - comando para iniciar app.
   - bun --watch index.ts
-  
-[Fonte Seguido](https://blog.openreplay.com/api-creation-with-bun/?ref=dailydev)

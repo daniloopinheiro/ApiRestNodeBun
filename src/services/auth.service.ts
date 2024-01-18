@@ -14,6 +14,7 @@ export const verificaToken = (token: string) => {
 };
 
 export const logaUsuarioToken = (data: {id: number; email: string}) => {
+    //Assina o token JWT
     const token = jwt.sign(
         {
             id: data.id,
